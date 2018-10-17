@@ -5,6 +5,7 @@ db.settings({
     timestampsInSnapshots: true
 })
 
+// send data to cloud firestore
 db.collection('karyawan').add({
     nama: 'Budi',
     usia: 23,
