@@ -26,6 +26,18 @@ router.post('/data', (req, res)=>{
     db.settings({
         timestampsInSnapshots: true
     })
+    db.collection('karyawan').add({
+        nama: req.body.nama,
+        usia: req.body.usia,
+        kota: req.body.kota,
+        waktu: new Date()
+    })
+    res.send({
+        nama: req.body.nama,
+        usia: req.body.usia,
+        kota: req.body.kota,
+        waktu: new Date()
+    })
 })
 
 module.exports = router
