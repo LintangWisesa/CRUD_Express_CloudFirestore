@@ -16,11 +16,13 @@ db.settings({
 // })
 
 // get all data from firestore
+var allData = []
 db.collection('karyawan')
 .orderBy('waktu', 'desc').get()
 .then(snapshot => {
     snapshot.forEach((hasil)=>{
-        console.log(hasil.data())
+        allData.push(hasil.data())
+        console.log(allData)
     })
 }).catch((error)=>{
     console.log(error)
