@@ -14,9 +14,9 @@ router.get('/data', (req, res)=>{
     .then(snapshot => {
         snapshot.forEach((hasil)=>{
             allData.push(hasil.data())
-            console.log(allData)
-            res.send(allData)
         })
+        console.log(allData)
+        res.send(allData)
     }).catch((error)=>{
         console.log(error)
     })

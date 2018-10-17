@@ -22,8 +22,8 @@ db.collection('karyawan')
 .then(snapshot => {
     snapshot.forEach((hasil)=>{
         allData.push(hasil.data())
-        console.log(allData)
     })
+    console.log(allData)
 }).catch((error)=>{
     console.log(error)
 })
